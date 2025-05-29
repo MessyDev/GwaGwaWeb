@@ -60,41 +60,79 @@
 </head>
 <body>
   <h1>🔒 GwaGwa Privacy Policy</h1>
-  <p><strong>Last Updated:</strong> May 28, 2025</p>
+  <p><strong>Last Updated:</strong> May 29, 2025</p>
 
   <h2>1. Information We Collect</h2>
   <ul>
     <li>Usernames and user IDs</li>
     <li>Message content (for command processing only)</li>
     <li>Server and channel IDs</li>
+    <li><strong>Channel configuration data</strong> (e.g., when using <code>!gwagwa channelset</code> to set cross-server communication channels)</li>
+    <li><strong>Call connection metadata</strong> (e.g., initiating or hanging up a cross-server call via <code>!gwagwa call</code> – server IDs, timestamps)</li>
+    <li><strong>Job application data</strong> (e.g., job names submitted via <code>!gwagwa apply</code> and status updates when using <code>!gwagwa quit</code>)</li>
+    <li><strong>Rizz points and related actions</strong> (e.g., totals for each user and any changes made via <code>!gwagwa rizzadd</code> or <code>!gwagwa rizzremove</code>)</li>
+    <li><strong>Server list requests</strong> (e.g., when using <code>!gwagwa servers</code> to retrieve a list of servers the bot is connected to)</li>
+    <li><strong>Facility-related queries</strong> (e.g., jobs, stats, and perks via <code>!gwagwa facility jobs</code>, <code>!gwagwa facility stats</code>, <code>!gwagwa facility perks</code>)</li>
+    <li><strong>Broadcast notifications</strong> (e.g., message content and channel IDs when using <code>!gwagwa notify</code> to send messages to configured channels; restricted to bot owner only)</li>
   </ul>
-  <p>All data is processed in real-time and is not stored unless explicitly required for a feature.</p>
+  <p>
+    All data listed above is accessed or collected when you invoke the corresponding commands. Some of these data points (such as rizz points, job applications, and channel configurations) <em>are stored persistently</em> for feature functionality. Other information (for example, raw message text) is processed in real time and discarded unless required to support a feature you have enabled.
+  </p>
 
   <h2>2. How We Use Your Information</h2>
   <ul>
     <li>To execute and respond to user commands</li>
-    <li>To enable and support bot features</li>
-    <li>To enhance the overall user experience</li>
+    <li>To enable and support persistent features, including:
+      <ul>
+        <li>Cross-server channel mappings (<code>!gwagwa channelset</code>)</li>
+        <li>Call history and connection metadata (<code>!gwagwa call</code>)</li>
+        <li>Job application tracking (<code>!gwagwa apply</code> / <code>!gwagwa quit</code>)</li>
+        <li>Rizz points ledger (<code>!gwagwa rizzadd</code> / <code>!gwagwa rizzremove</code> / <code>!gwagwa rizzpoints</code>)</li>
+      </ul>
+    </li>
+    <li>To send broadcast or facility-related notifications when authorized via <code>!gwagwa notify</code></li>
+    <li>To provide up-to-date information (e.g., available jobs via <code>!gwagwa facility jobs</code>, server listings via <code>!gwagwa servers</code>)</li>
+    <li>To enhance and improve the overall user experience of the bot and its features</li>
   </ul>
-  <p>We do not use your data for advertising, profiling, or analytics.</p>
+  <p>
+    We do <strong>not</strong> use your data for advertising or profiling. Any stored data is only used internally to support and maintain the features you choose to use.
+  </p>
 
   <h2>3. Data Storage</h2>
-  <p>GwaGwa does not retain user data persistently. If future features require storage (e.g., preferences or leveling systems), you will be notified, and data will be handled securely and transparently.</p>
+  <p>
+    GwaGwa stores data only when necessary to fulfill the functionality of specific commands and features. Persistent data includes:
+  </p>
+  <ul>
+    <li><strong>Channel configurations:</strong> Server IDs and channel IDs mapped for cross-server communication (<code>!gwagwa channelset</code>).</li>
+    <li><strong>Call logs:</strong> Metadata such as server IDs, timestamps, and call statuses for connections initiated via <code>!gwagwa call</code>.</li>
+    <li><strong>Job application records:</strong> Job names, user IDs, and status flags when you apply (<code>!gwagwa apply</code>) or quit (<code>!gwagwa quit</code>).</li>
+    <li><strong>Rizz points ledger:</strong> Cumulative rizz point totals per user, adjusted via <code>!gwagwa rizzadd</code> or <code>!gwagwa rizzremove</code>.</li>
+  </ul>
+  <p>
+    All stored data is retained securely following best practices in encryption and access control. We will notify you in advance if any additional features require the collection or storage of new types of personal data.
+  </p>
 
   <h2>4. Third-Party Sharing</h2>
-  <p>We do not share any collected data with third parties. No analytics tools, trackers, or external integrations collect user data.</p>
+  <p>
+    We do not share any collected data with external third parties, including analytics platforms or advertisers. All information remains within GwaGwa’s own systems and is not sold or transferred to external entities. In the event that we integrate a third-party service (e.g., for backups or hosted databases), any data shared will be strictly limited to what is necessary for that service to function, and we will update this Policy prior to implementation.
+  </p>
 
   <h2>5. Your Rights</h2>
   <ul>
-    <li>You may remove the bot from your server at any time.</li>
-    <li>You can contact us to request data deletion or more information.</li>
+    <li>You may remove the bot from your server at any time to revoke any data access or storage.</li>
+    <li>You have the right to request deletion of your personal or feature-related data (such as job application records or rizz point totals). To do so, contact us at the email below with your user ID and the specific data you wish to delete.</li>
+    <li>If you believe any data we hold is inaccurate or incomplete, you may request corrections or updates.</li>
   </ul>
 
   <h2>6. Changes to This Policy</h2>
-  <p>This Privacy Policy may be updated periodically. Any changes will be reflected by the updated “Last Updated” date above. Continued use of GwaGwa after updates signifies your acceptance of the new policy.</p>
+  <p>
+    We may update this Privacy Policy periodically to reflect new features or changes in data practices. Any updates will be indicated by a revised “Last Updated” date above. Continued use of GwaGwa after updates signifies your acceptance of the revised policy.
+  </p>
 
   <h2>7. Contact</h2>
-  <p>For questions or concerns related to privacy, please contact us at:</p>
+  <p>
+    For questions, concerns, or data deletion requests, please contact us at:
+  </p>
   <ul>
     <li>Email: <a href="mailto:iembetea@gmail.com">iembetea@gmail.com</a></li>
   </ul>
