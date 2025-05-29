@@ -67,7 +67,15 @@
 
   <h2>1. Bot Setup</h2>
   <ol>
-    </liJoin>Join the bot to your server.</li>
+    <li>Invite the bot to your server (use the OAuth2 link with proper permissions).</li>
+    <li>Ensure the bot has these minimum permissions:
+      <ul>
+        <li>Send Messages</li>
+        <li>Manage Channels (for cross-server linking)</li>
+        <li>Read Message History</li>
+        <li>Embed Links</li>
+      </ul>
+    </li>
   </ol>
 
   <h2>2. Command Prefix</h2>
@@ -75,47 +83,108 @@
 
   <h2>3. Facility Commands</h2>
   <ul>
-    <li><code>!gwagwa facility jobs</code><br>List all available jobs and hourly pay rates.</li>
-    <li><code>!gwagwa facility stats</code><br>Show dynamic facility stats (cleanliness, reactor level, security, employment rate).</li>
-    <li><code>!gwagwa facility perks</code><br>Display server perks based on chat activity and jobs filled.</li>
+    <li><code>!gwagwa facility jobs</code><br>
+        List all available jobs and their hourly pay rates.</li>
+    <li><code>!gwagwa facility stats</code><br>
+        Show dynamic facility stats (cleanliness, reactor level, security status, employment rate).</li>
+    <li><code>!gwagwa facility perks</code><br>
+        Display server perks based on chat activity and number of jobs filled.</li>
   </ul>
 
   <h2>4. Job Application Commands</h2>
   <ul>
-    <li><code>!gwagwa apply &lt;job name&gt;</code><br>Apply for a job (if slots available).</li>
-    <li><code>!gwagwa quit</code><br>Quit your current job.</li>
+    <li><code>!gwagwa apply &lt;job_name&gt;</code><br>
+        Apply for a job (if there are open slots for that position).</li>
+    <li><code>!gwagwa quit</code><br>
+        Quit your current job.</li>
   </ul>
 
   <h2>5. Rizz Points Commands</h2>
   <ul>
-    <li><code>!gwagwa rizzpoints [&lt;@user&gt;]</code><br>Check your or another user's rizz points.</li>
-    <li><code>!gwagwa rizzadd &lt;@user&gt; &lt;amount&gt;</code><br>*(Admin only)* Add rizz points to a user.</li>
-    <li><code>!gwagwa rizzremove &lt;@user&gt; &lt;amount&gt;</code><br>*(Admin only)* Remove rizz points.</li>
+    <li><code>!gwagwa rizzpoints [&lt;@user&gt;]</code><br>
+        Check your own or another user's rizz points.</li>
+    <li><code>!gwagwa rizzadd &lt;@user&gt; &lt;amount&gt;</code><br>
+        <strong>(Admin only)</strong> Add rizz points to a given user.</li>
+    <li><code>!gwagwa rizzremove &lt;@user&gt; &lt;amount&gt;</code><br>
+        <strong>(Admin only)</strong> Remove rizz points from a given user.</li>
   </ul>
 
   <h2>6. Cross-Server Communication</h2>
   <ul>
-    <li><code>!gwagwa channelset &lt;channel_id&gt;</code><br>*(Admin only)* Set the channel for relayed messages in this server.</li>
-    <li><code>!gwagwa call &lt;server_id&gt;</code><br>Initiate a call to another server with buttons to accept or decline.</li>
-    <li><code>!gwagwa call hangup</code><br>End an active call.</li>
+    <li><code>!gwagwa channelset &lt;channel_id|channel_name|&lt;#channel_id&gt;&gt;</code><br>
+        <strong>(Admin only)</strong> Set the designated channel in this server for relayed messages. Once set, any server connected via <code>!gwagwa call</code> will broadcast into this channel.</li>
+    <li><code>!gwagwa call &lt;server_id&gt;</code><br>
+        Initiate a cross-server connection request to the target server. The other server will see buttons to accept or decline.</li>
+    <li><code>!gwagwa call hangup</code><br>
+        End an active cross-server connection (hang up).</li>
   </ul>
 
-  <h2>7. Utility Commands</h2>
+  <h2>7. Utility & Server Info Commands</h2>
   <ul>
-    <li><code>!gwagwa servers</code><br>List all servers the bot is currently in.</li>
+    <li><code>!gwagwa servers</code><br>
+        List all the servers that GwaGwa Bot is currently in (along with their IDs).</li>
   </ul>
 
-  <h2>8. Examples</h2>
-  <pre><code>// Applying for Janitor
-!gwagwa apply janitor
+  <h2>8. Bot Owner & Admin-Only Commands</h2>
+  <ul>
+    <li><code>!gwagwa notify &lt;message&gt;</code><br>
+        <strong>(Bot Owner only)</strong> Send a broadcast message to all channels that have been set via <code>!gwagwa channelset</code>.</li>
+    <li><code>!gwagwa rizzadd &lt;@user&gt; &lt;amount&gt;</code><br>
+        <strong>(Admin only)</strong> Add rizz points to a user (listed above in Rizz Points).</li>
+    <li><code>!gwagwa rizzremove &lt;@user&gt; &lt;amount&gt;</code><br>
+        <strong>(Admin only)</strong> Remove rizz points from a user (listed above in Rizz Points).</li>
+    <li><code>!gwagwa channelset &lt;channel_id|channel_name|&lt;#channel_id&gt;&gt;</code><br>
+        <strong>(Admin only)</strong> (also listed above under Cross-Server)</li>
+  </ul>
 
-// Checking facility stats
+  <h2>9. Informational & Policy Commands</h2>
+  <ul>
+    <li><code>!gwagwa termsofservice</code><br>
+        Display the Terms of Service link for GwaGwa Bot.</li>
+    <li><code>!gwagwa privacypolicy</code><br>
+        Display the Privacy Policy link for GwaGwa Bot.</li>
+    <li><code>!gwagwa guide</code><br>
+        Display the link to this Guide page/documentation.</li>
+    <li><code>!gwagwa help</code><br>
+        Show the complete help message (all commands and a brief description).</li>
+  </ul>
+
+  <h2>10. Examples</h2>
+  <pre><code>// 1. Applying for the "Mechanic" job
+!gwagwa apply mechanic
+
+// 2. Checking facility stats
 !gwagwa facility stats
 
-// Admin setting call channel\!gwagwa channelset 123456789012345678
+// 3. Admin sets this channel for cross-server relay
+!gwagwa channelset 123456789012345678
 
-// Starting a call
+// 4. Starting a cross-server call to server ID 987654321098765432
 !gwagwa call 987654321098765432
+
+// 5. Hanging up an active call
+!gwagwa call hangup
+
+// 6. Checking your own rizz points
+!gwagwa rizzpoints
+
+// 7. Admin adding 50 rizz points to @User
+!gwagwa rizzadd @User 50
+
+// 8. Listing all servers GwaGwa is in
+!gwagwa servers
+
+// 9. Bot owner sending a notification to all linked channels
+!gwagwa notify Attention all servers, maintenance starts in 10 minutes!
+
+// 10. Viewing Terms of Service
+!gwagwa termsofservice
+
+// 11. Showing this guide
+!gwagwa guide
+
+// 12. Getting the help menu
+!gwagwa help
 </code></pre>
 
   <div class="footer">
