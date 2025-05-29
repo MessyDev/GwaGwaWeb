@@ -2,52 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GwaGwa Bot Guide & Commands</title>
   <style>
     body {
-      max-width: 900px;
-      margin: 2rem auto;
+      margin: 0;
+      padding: 2rem;
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #fff;
+      background-color: #f9f9f9;
       color: #222;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
       line-height: 1.6;
-      padding: 0 1rem;
     }
     h1, h2 {
       color: #007bff;
     }
     h1 {
       text-align: center;
-      margin-bottom: 1rem;
       font-size: 2.5rem;
+      margin-bottom: 1rem;
     }
     h2 {
       margin-top: 2rem;
-      margin-bottom: 0.5rem;
+      font-size: 1.75rem;
     }
-    p {
-      margin-bottom: 1rem;
+    code {
+      background: #eaeaea;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-family: Consolas, Menlo, monospace;
+    }
+    pre {
+      background: #eaeaea;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
     }
     ul {
-      list-style-type: disc;
-      padding-left: 1.5rem;
+      padding-left: 1.2rem;
     }
     li {
       margin-bottom: 0.5rem;
     }
-    code {
-      background-color: #f1f1f1;
-      padding: 0.1rem 0.3rem;
-      border-radius: 3px;
-      font-family: Consolas, monospace;
+    a {
+      color: #007bff;
+      text-decoration: none;
     }
-    .command-list {
-      background-color: #e9f0ff;
-      padding: 1rem 1.5rem;
-      border-radius: 6px;
-      margin-top: 1rem;
-      box-shadow: 0 2px 6px rgb(0 123 255 / 0.15);
+    a:hover {
+      text-decoration: underline;
     }
     .footer {
       margin-top: 3rem;
@@ -58,66 +62,69 @@
   </style>
 </head>
 <body>
-  <h1>📱 GwaGwa Bot Guide & Commands</h1>
+  <h1>📖 GwaGwa Bot Guide & Commands</h1>
+  <p>This guide covers setup, commands, and examples for <strong>GwaGwa</strong>, the cross-server communication Discord bot by <strong>abcman123</strong>.</p>
 
-  <section>
-    <h2>How GwaGwa Works</h2>
-    <p>
-      GwaGwa is a versatile Discord bot designed to simulate phone-like communication within your server.
-      It lets you interact using in-game currency, manage roles called “Facilities,” and have fun with unique social features.
-    </p>
-    <p>
-      The bot runs commands in real-time, providing interactive experiences while respecting your privacy and server rules.
-    </p>
-  </section>
+  <h2>1. Bot Setup</h2>
+  <ol>
+    <li>Ensure Python 3.8+ is installed.</li>
+    <li>Install dependencies:<br><code>pip install discord.py python-dotenv</code></li>
+    <li>Create a <code>.env</code> file in your project root with:<br>
+      <code>DISCORD_BOT_TOKEN=YOUR_TOKEN_HERE</code>
+    </li>
+    <li>Run the bot:<br><code>python bot.py</code></li>
+  </ol>
 
-  <section>
-    <h2>Getting Started</h2>
-    <ul>
-      <li>Invite GwaGwa to your server using the invite link provided (ask the bot owner for access).</li>
-      <li>Make sure GwaGwa has the necessary permissions (Send Messages, Manage Roles, Read Message History).</li>
-      <li>Use the prefix <code>!</code> to trigger commands (e.g., <code>!help</code>).</li>
-    </ul>
-  </section>
+  <h2>2. Command Prefix</h2>
+  <p>All commands use the prefix: <code>!gwagwa </code></p>
 
-  <section>
-    <h2>Common Commands</h2>
-    <div class="command-list">
-      <ul>
-        <li><code>!help</code> — Show the list of available commands.</li>
-        <li><code>!balance</code> — Check your in-game currency balance.</li>
-        <li><code>!transfer &lt;@user&gt; &lt;amount&gt;</code> — Send currency to another user.</li>
-        <li><code>!facilities</code> — View available Facilities (special roles) in the server.</li>
-        <li><code>!joinfacility &lt;facility-name&gt;</code> — Join a Facility role.</li>
-        <li><code>!leavefacility &lt;facility-name&gt;</code> — Leave a Facility role.</li>
-        <li><code>!call &lt;@user&gt;</code> — Simulate a phone call to another user.</li>
-        <li><code>!sms &lt;@user&gt; &lt;message&gt;</code> — Send a private message like SMS.</li>
-      </ul>
-    </div>
-  </section>
+  <h2>3. Facility Commands</h2>
+  <ul>
+    <li><code>!gwagwa facility jobs</code><br>List all available jobs and hourly pay rates.</li>
+    <li><code>!gwagwa facility stats</code><br>Show dynamic facility stats (cleanliness, reactor level, security, employment rate).</li>
+    <li><code>!gwagwa facility perks</code><br>Display server perks based on chat activity and jobs filled.</li>
+  </ul>
 
-  <section>
-    <h2>Tips & Best Practices</h2>
-    <ul>
-      <li>Respect other users and server rules while using the bot.</li>
-      <li>Don’t spam commands to keep the experience smooth for everyone.</li>
-      <li>Use Facilities wisely to engage with specialized roles and perks.</li>
-      <li>Contact <strong>abcman123</strong> if you encounter issues or have suggestions.</li>
-    </ul>
-  </section>
+  <h2>4. Job Application Commands</h2>
+  <ul>
+    <li><code>!gwagwa apply &lt;job name&gt;</code><br>Apply for a job (if slots available).</li>
+    <li><code>!gwagwa quit</code><br>Quit your current job.</li>
+  </ul>
 
-  <section>
-    <h2>Need Help?</h2>
-    <p>If you have any questions, feel free to reach out:</p>
-    <ul>
-      <li>Discord: <strong>abcman123</strong></li>
-      <li>Email: <a href="mailto:iembetea@gmail.com">iembetea@gmail.com</a></li>
-      <li>Support Server: <em>Coming Soon</em></li>
-    </ul>
-  </section>
+  <h2>5. Rizz Points Commands</h2>
+  <ul>
+    <li><code>!gwagwa rizzpoints [&lt;@user&gt;]</code><br>Check your or another user's rizz points.</li>
+    <li><code>!gwagwa rizzadd &lt;@user&gt; &lt;amount&gt;</code><br>*(Admin only)* Add rizz points to a user.</li>
+    <li><code>!gwagwa rizzremove &lt;@user&gt; &lt;amount&gt;</code><br>*(Admin only)* Remove rizz points.</li>
+  </ul>
+
+  <h2>6. Cross-Server Communication</h2>
+  <ul>
+    <li><code>!gwagwa channelset &lt;channel_id&gt;</code><br>*(Admin only)* Set the channel for relayed messages in this server.</li>
+    <li><code>!gwagwa call &lt;server_id&gt;</code><br>Initiate a call to another server with buttons to accept or decline.</li>
+    <li><code>!gwagwa call hangup</code><br>End an active call.</li>
+  </ul>
+
+  <h2>7. Utility Commands</h2>
+  <ul>
+    <li><code>!gwagwa servers</code><br>List all servers the bot is currently in.</li>
+  </ul>
+
+  <h2>8. Examples</h2>
+  <pre><code>// Applying for Janitor
+!gwagwa apply janitor
+
+// Checking facility stats
+!gwagwa facility stats
+
+// Admin setting call channel\!gwagwa channelset 123456789012345678
+
+// Starting a call
+!gwagwa call 987654321098765432
+</code></pre>
 
   <div class="footer">
-    © 2025 GwaGwa Bot – Created by abcman123
+    © 2025 GwaGwa Bot • Developed by abcman123
   </div>
 </body>
 </html>
