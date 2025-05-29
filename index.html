@@ -9,70 +9,102 @@
       margin: 0;
       padding: 0;
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
+      background: linear-gradient(to bottom, #cde8ff, #eef6ff);
+      color: #1a1a1a;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
       text-align: center;
+      background-attachment: fixed;
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.7rem;
+      color: #0b3b8c;
       margin-bottom: 1rem;
+      text-shadow: 1px 1px 2px #c3e4ff;
     }
 
     p {
       font-size: 1.1rem;
-      max-width: 600px;
+      max-width: 650px;
+      margin: 0 auto 1rem;
     }
 
     ul {
       list-style: none;
       padding: 0;
-      margin: 1.5rem 0;
+      margin: 2rem 0 1rem;
     }
 
     li {
-      margin: 0.5rem 0;
+      margin: 0.6rem 0;
     }
 
     a {
       text-decoration: none;
-      color: #007bff;
-      font-weight: 500;
+      color: #0457c8;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 8px;
+      background: linear-gradient(to bottom, #ffffffcc, #e6f0ff);
+      border: 1px solid #a3c5ff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      transition: all 0.2s ease;
+      display: inline-block;
     }
 
     a:hover {
+      background: linear-gradient(to bottom, #e6f0ff, #d3eaff);
       text-decoration: underline;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
 
     .contact {
       margin-top: 2rem;
       font-size: 0.95rem;
-      color: #666;
+      color: #333;
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 10px;
+      padding: 1rem 1.5rem;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(5px);
     }
 
     .contact strong {
-      color: #000;
+      color: #0b3b8c;
+    }
+
+    /* Vista Glass Panel Effect */
+    .glass {
+      background: rgba(255, 255, 255, 0.55);
+      border-radius: 15px;
+      padding: 2rem;
+      backdrop-filter: blur(6px);
+      border: 1px solid #b4d1ff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      margin: 2rem;
+      max-width: 700px;
     }
   </style>
 </head>
 <body>
-  <h1>📄 GwaGwa Legal Center</h1>
-  <p>Welcome to the official legal documentation page for <strong>GwaGwa</strong>, the Discord bot developed by <strong>abcman123</strong>.</p>
-  
-  <ul>
-    <li><a href="tos.html">📘 Terms of Service</a></li>
-    <li><a href="privacy.html">🔒 Privacy Policy</a></li>
-    <li><a href="guide.html">📖 Guide & Commands</a></li>
-  </ul>
+  <div class="glass">
+    <h1>📄 GwaGwa Legal Center</h1>
+    <p>Welcome to the official legal documentation page for <strong>GwaGwa</strong>, the Discord bot developed by <strong>abcman123</strong>.</p>
+    
+    <ul>
+      <li><a href="tos.html">📘 Terms of Service</a></li>
+      <li><a href="privacy.html">🔒 Privacy Policy</a></li>
+      <li><a href="guide.html">📖 Guide & Commands</a></li>
+    </ul>
 
-  <div class="contact">
-    <p>Need assistance? Reach out via email: <strong>iembetea@gmail.com</strong></p>
-    <p>Or add me on Discord: <strong>abcman123</strong></p>
+    <div class="contact">
+      <p>Need assistance? Reach out via email: <strong>iembetea@gmail.com</strong></p>
+      <p>Or add me on Discord: <strong>abcman123</strong></p>
+    </div>
   </div>
 </body>
 </html>
