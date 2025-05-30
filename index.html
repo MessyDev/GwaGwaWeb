@@ -5,107 +5,176 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GwaGwa Legal Center</title>
   <style>
-    body {
+    /* ================================
+       BLACKOUT REVIVAL WIKI THEME CSS
+       ================================ */
+
+    html, body {
       margin: 0;
       padding: 0;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to bottom, #cde8ff, #eef6ff);
-      color: #1a1a1a;
+      background-color: #0b0b0b;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
       min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+    }
+
+    /* neon‐glow header */
+    header {
       text-align: center;
-      background-attachment: fixed;
+      padding: 20px;
+      background-color: #000000;
+      border-bottom: 2px solid #00ff8f;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3em;
+      color: #00ff8f;
+      text-shadow:
+        0 0 5px #00ff8f,
+        0 0 10px #00ff8f,
+        0 0 20px #00ff8f;
     }
 
-    h1 {
-      font-size: 2.7rem;
-      color: #0b3b8c;
-      margin-bottom: 1rem;
-      text-shadow: 1px 1px 2px #c3e4ff;
+    /* Main container (centers content) */
+    .main-container {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 0 20px;
     }
 
-    p {
-      font-size: 1.1rem;
-      max-width: 650px;
-      margin: 0 auto 1rem;
+    /* “Glass”‐style panel matching blackout wiki’s .about panel */
+    .glass-panel {
+      background-color: #111111;
+      border: 2px solid #00ff8f;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0, 255, 143, 0.2);
     }
 
-    ul {
+    /* Section Titles */
+    .glass-panel h2 {
+      margin-top: 0;
+      font-size: 1.8em;
+      color: #ffa42f;
+      text-align: center;
+      text-shadow:
+        0 0 5px #ffa42f,
+        0 0 10px #ffa42f;
+    }
+
+    /* Paragraph text inside the glass panel */
+    .glass-panel p {
+      line-height: 1.5;
+      font-size: 1.1em;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Link list (unstyled) */
+    .link-list {
       list-style: none;
       padding: 0;
-      margin: 2rem 0 1rem;
+      margin: 2rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
     }
 
-    li {
-      margin: 0.6rem 0;
-    }
-
-    a {
-      text-decoration: none;
-      color: #0457c8;
-      font-weight: 600;
-      padding: 10px 20px;
-      border-radius: 8px;
-      background: linear-gradient(to bottom, #ffffffcc, #e6f0ff);
-      border: 1px solid #a3c5ff;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-      transition: all 0.2s ease;
+    /* Each link styled as a neon‐bordered button */
+    .link-list a {
       display: inline-block;
+      font-size: 1.1em;
+      color: #00ff8f;
+      text-decoration: none;
+      padding: 12px 24px;
+      border: 2px solid #00ff8f;
+      border-radius: 6px;
+      background-color: #0a0a0a;
+      transition: all 0.2s ease;
+      box-shadow:
+        0 0 5px #00ff8f,
+        0 0 10px #00ff8f;
+      width: 100%;
+      max-width: 300px;
+      text-align: center;
+    }
+    .link-list a:hover {
+      background-color: #00ff8f;
+      color: #0b0b0b;
+      box-shadow:
+        0 0 10px #00ff8f,
+        0 0 20px #00ff8f;
     }
 
-    a:hover {
-      background: linear-gradient(to bottom, #e6f0ff, #d3eaff);
-      text-decoration: underline;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    .contact {
+    /* Contact box at the bottom */
+    .contact-box {
       margin-top: 2rem;
-      font-size: 0.95rem;
-      color: #333;
-      background: rgba(255, 255, 255, 0.6);
-      border-radius: 10px;
-      padding: 1rem 1.5rem;
-      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-      backdrop-filter: blur(5px);
+      background-color: #111111;
+      border: 2px solid #ffa42f;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(255, 164, 47, 0.2);
+    }
+    .contact-box p {
+      margin: 0.5rem 0;
+      font-size: 1em;
+      color: #cccccc;
+    }
+    .contact-box p strong {
+      color: #ffa42f;
     }
 
-    .contact strong {
-      color: #0b3b8c;
-    }
-
-    /* Vista Glass Panel Effect */
-    .glass {
-      background: rgba(255, 255, 255, 0.55);
-      border-radius: 15px;
-      padding: 2rem;
-      backdrop-filter: blur(6px);
-      border: 1px solid #b4d1ff;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      margin: 2rem;
-      max-width: 700px;
+    /* Footer bar */
+    footer {
+      text-align: center;
+      padding: 10px 0;
+      background-color: #000000;
+      border-top: 2px solid #00ff8f;
+      font-size: 0.85em;
+      color: #777777;
     }
   </style>
 </head>
 <body>
-  <div class="glass">
-    <h1>📄 GwaGwa Legal Center</h1>
-    <p>Welcome to the official legal documentation page for <strong>GwaGwa</strong>, the Discord bot developed by <strong>abcman123</strong>.</p>
-    
-    <ul>
-      <li><a href="tos.html">📘 Terms of Service</a></li>
-      <li><a href="privacy.html">🔒 Privacy Policy</a></li>
-      <li><a href="guide.html">📖 Guide & Commands</a></li>
-    </ul>
 
-    <div class="contact">
-      <p>Need assistance? Reach out via email: <strong>iembetea@gmail.com</strong></p>
-      <p>Or add me on Discord: <strong>abcman123</strong></p>
+  <!-- HEADER -->
+  <header>
+    <h1>📄 GwaGwa Legal Center</h1>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <div class="main-container">
+    <div class="glass-panel">
+
+      <!-- Brief Introduction -->
+      <h2>Welcome to GwaGwa Legal</h2>
+      <p>
+        This is the official legal documentation page for <strong>GwaGwa</strong>,
+        the Discord bot developed by <strong>abcman123</strong>.
+      </p>
+
+      <!-- Links to TOS, Privacy, Guide & Commands -->
+      <ul class="link-list">
+        <li><a href="tos.html">📘 Terms of Service</a></li>
+        <li><a href="privacy.html">🔒 Privacy Policy</a></li>
+        <li><a href="guide.html">📖 Guide & Commands</a></li>
+      </ul>
+
+      <!-- Contact Information -->
+      <div class="contact-box">
+        <p>Need assistance? Reach out via email: <strong>iembetea@gmail.com</strong></p>
+        <p>Or add me on Discord: <strong>abcman123</strong></p>
+      </div>
+
     </div>
   </div>
-</div>
+
+  <!-- FOOTER -->
+  <footer>
+    &copy; 2025 GwaGwa • All rights reserved
+  </footer>
+
 </body>
 </html>
