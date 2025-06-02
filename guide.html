@@ -258,6 +258,14 @@
         <code>!gwagwa call hangup</code><br />
         Terminate an active cross-server connection (“hang up”).
       </li>
+      <li>
+        <code>!gwagwa privacy &lt;on|off&gt;</code><br />
+        <strong>(Admin Only)</strong> Toggle privacy mode to hide server names and user tags in relayed messages.
+      </li>
+      <li>
+        <code>!gwagwa callnumbers</code><br />
+        Shows all server call numbers currently linked through GwaGwa Bot.
+      </li>
     </ul>
 
     <!-- Section 7: Utility & Server Info Commands -->
@@ -318,37 +326,55 @@
 // 1. Apply for the "Mechanic" job:
 !gwagwa apply mechanic
 
-// 2. Check Facility Stats:
+// 2. Check your facility stats:
 !gwagwa facility stats
 
-// 3. Admin sets this channel for cross-server relay:
+// 3. (Admin Only) Set this channel for cross-server message relay:
 !gwagwa channelset 123456789012345678
 
-// 4. Start a cross-server call to server ID 987654321098765432:
+// 4. Start a cross-server call with server ID 987654321098765432:
 !gwagwa call 987654321098765432
 
 // 5. Hang up an active call:
 !gwagwa call hangup
 
-// 6. Check your own Rizz points:
+// 6. List all available cross-server call numbers:
+!gwagwa callnumbers
+
+// 7. (Admin Only) Toggle privacy mode (hide server/user info):
+!gwagwa privacy on
+
+// 8. Check your current Rizz points:
 !gwagwa rizzpoints
 
-// 7. Admin adds 50 Rizz points to @User:
+// 9. (Admin Only) Add 50 Rizz points to @User:
 !gwagwa rizzadd @User 50
 
-// 8. List all servers GwaGwa is in:
+// 10. (Admin Only) Add a custom trigger-response:
+!gwagwa trigger add hello=Hi there!
+
+// 11. (Admin Only) Remove a custom trigger:
+!gwagwa trigger remove hello
+
+// 12. (Admin Only) List all custom triggers:
+!gwagwa trigger list
+
+// 13. (Owner Only) List all servers GwaGwa Bot is active in:
 !gwagwa servers
 
-// 9. Bot owner sends a notification to all linked channels:
+// 14. (Owner Only) Send a notification to all linked channels:
 !gwagwa notify Attention all servers, maintenance starts in 10 minutes!
 
-// 10. View Terms of Service:
+// 15. View the Terms of Service:
 !gwagwa termsofservice
 
-// 11. Show this guide:
+// 16. View the Privacy Policy:
+!gwagwa privacypolicy
+
+// 17. Show the user guide:
 !gwagwa guide
 
-// 12. Display help menu:
+// 18. Display the help menu:
 !gwagwa help
     </code></pre>
 
